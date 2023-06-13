@@ -6,7 +6,12 @@
   
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="https://cdn.rawgit.com/oauth-io/oauth-js/c5af4519/dist/oauth.js"></script>
-  <script>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+ 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geologica:wght@500&family=Lobster&family=Noto+Serif+Display:ital@1&family=Tilt+Prism&display=swap" rel="stylesheet">
+ <script>
     $(document).ready(function() {
       $('#twitter-button').on('click', function() {
         // Initialize with your OAuth.io app public key
@@ -20,110 +25,8 @@
       });
     });
   </script>
-  
-  <style>
-
-    html{
-      background-size:cover;
-    }
-
-    body {
-      margin: 0;
-      padding: 0;
-      background: linear-gradient(179.2deg, rgb(34, 34, 34) 0%, rgb(8, 0, 153) 29.7%, rgb(118, 6, 166) 63.4%, rgba(233, 0, 64, 0.58) 100.1%);
-
-    
-       }
-
-    nav {
-      background: radial-gradient(328px at 2.9% 15%, rgb(191, 224, 251) 0%, rgb(232, 233, 251) 25.8%, rgb(252, 239, 250) 50.8%, rgb(234, 251, 251) 77.6%, rgb(240, 251, 244) 100.7%) rgba(255, 255, 255, 0.1);
-      position: fixed;
-      top: 0px;
-      width: 100%;
-      z-index: 1;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 1);
-    }
-
-    .logo {
-  position: relative;
-  left: 25px;
-  margin: 10px;
-  font-weight: bold;
-  float: left;
-  font-family: nova cut;
-  font-size: 24px;
-  color: black;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-}
-
-.logo::before {
-  content: "";
-  position: absolute;
-  top: -10px;
-  left: 0;
-  width: 100%;
-  height: 10px;
-  background: linear-gradient(to bottom, rgba(5, 142, 226, 0.4), rgba(10, 209, 30, 0));
-  z-index: -1;
-  animation: logo-reflection 2s infinite;
-}
-
-@keyframes logo-reflection {
-  0% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(20px);
-  }
-  100% {
-    transform: translateY(0);
-  }
-}
-
-
-.login-button {
-  background-color: #3f51b5;
-  position: relative;
-  right: 2px;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  padding: 10px 20px;
-  float: right;
-  margin: 10px;
-  transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-.login-button i {
-  pointer-events: auto;
-}
-    .login-button:hover {
-      background-color: #303f9f;
-      border-color: black;
-      transform: scale(1.1);
-
-    }
-
-    /* Additional styles for the page */
-   
-
-    .content {
-      margin-top: 652px;
-      text-align: center;
-      color: #fff;
-
-      
-    }
-
-    h1 {
-      font-size: 36px;
-      font-family: 'Geologica', sans-serif;    }
-  </style>
-
-
-
-
 </head>
+
 <body>
   <nav>
     <div class="logo">TwT.Mate</div>
@@ -136,7 +39,7 @@
 
   <div class="content">
     <h1>Welcome to TwT.Mate</h1>
-    <p>This is a sample content area on the page.</p>
+    <p style="font-family: 'Tilt Prism', cursive; font-size:32px;">Adding life to your tweets :) </p>
   </div>
 </body>
 </html>
