@@ -77,9 +77,42 @@
     transition: background-color 0.3s ease, transform 0.3s ease;
     }
 
+    
     .login-button i {
     pointer-events: auto;
+     margin-right: 5px; /* Add spacing between icon and text */
     }
+
+   
+    .login-button i {
+        animation: flipBird 2s linear infinite;
+        transform-style: preserve-3d;
+      }
+      
+      @keyframes flipBird {
+        0% {
+          transform: perspective(800px) rotateY(0deg);
+        }
+        50% {
+          transform: perspective(800px) rotateY(180deg);
+        }
+        100% {
+          transform: perspective(800px) rotateY(360deg);
+        }
+      }
+
+    .login-button::before {
+        content: "";
+        position: absolute;
+        left: 38px;
+        top: 50%;
+        width: 1px;
+        height: 70%;
+        background-color: black; /* Adjust the color as needed */
+        transform: translateY(-50%);
+    }
+
+    
         .login-button:hover {
         background-color: #303f9f;
         border-color: black;
@@ -95,11 +128,11 @@
       text-align:center;
       color: #fff;
 
-      
-    } */
+    } 
 
      h1 {
       font-size: 36px;
       font-family: 'Tilt Prism', cursive;   }
+
 
   </style>
