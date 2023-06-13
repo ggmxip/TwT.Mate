@@ -144,11 +144,25 @@
         margin: auto;
     }
     @keyframes typing {
-        from { width: 0; }
-        to { width: 100%; }
+        /* from { width: 0; }
+        to { width: 100%; } */
+
+        0%,
+        50%,
+        100% {
+          width: 0;
+        }
+        10%,
+        40% {
+          width: 13em;
+        }
+      }
+      @keyframes blink-caret {
+        from, to { border-color: transparent; }
+        50% { border-color: yellow; }
     }
     
-    #typewriter {
+      #typewriter {
         font-family: 'Courier New', Courier, monospace;
         white-space: nowrap;
         overflow: hidden;
@@ -156,9 +170,7 @@
         margin: 0 auto; /* Add this line to center the element horizontally */
         text-align: center; /* Add this line to center the text within the element */
         width: 50%; /* Adjust the width as desired */
-        animation: typing 2.5s steps(40, end) infinite;
-    } */
-
-
-    
+        animation: typing 8s steps(40, end) infinite, blink-caret 1s step-end infinite;
+    } 
+       
   </style>

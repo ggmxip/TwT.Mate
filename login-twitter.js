@@ -35,24 +35,30 @@ $(document).ready(function() {
     // })
 
 
+
+    
     // js for the type writer :)
-// JavaScript code
+
 // const text = "Welcome to TwT.Mate";
 // let index = 0;
+// let eraseMode = false;
 
 // function typeWriter() {
-//   if (index < text.length) {
-//     document.getElementById("typewriter").innerHTML += text.charAt(index);
+//   const typewriterElement = document.getElementById("typewriter");
+  
+//   if (index < text.length && !eraseMode) {
+//     typewriterElement.innerHTML += text.charAt(index);
 //     index++;
 //     setTimeout(typeWriter, 100);
-//   } else {
-//     setTimeout(eraseText, 3000);
-//   }
-// }
-
-// function eraseText() {
-//   if (index >= 0) {
-//     document.getElementById("typewriter").innerHTML = "";
+//   } else if (index >= 0 && eraseMode) {
+//     typewriterElement.innerHTML = text.substring(0, index);
+//     index--;
+//     setTimeout(typeWriter, 50);
+//   } else if (index >= text.length && !eraseMode) {
+//     eraseMode = true;
+//     setTimeout(typeWriter, 2000);
+//   } else if (index < 0 && eraseMode) {
+//     eraseMode = false;
 //     index = 0;
 //     setTimeout(typeWriter, 100);
 //   }
@@ -60,32 +66,9 @@ $(document).ready(function() {
 
 // typeWriter();
 
-const text = "Welcome to TwT.Mate";
-let index = 0;
-let eraseMode = false;
 
-function typeWriter() {
-  const typewriterElement = document.getElementById("typewriter");
-  
-  if (index < text.length && !eraseMode) {
-    typewriterElement.innerHTML += text.charAt(index);
-    index++;
-    setTimeout(typeWriter, 100);
-  } else if (index >= 0 && eraseMode) {
-    typewriterElement.innerHTML = text.substring(0, index);
-    index--;
-    setTimeout(typeWriter, 50);
-  } else if (index >= text.length && !eraseMode) {
-    eraseMode = true;
-    setTimeout(typeWriter, 2000);
-  } else if (index < 0 && eraseMode) {
-    eraseMode = false;
-    index = 0;
-    setTimeout(typeWriter, 100);
-  }
-}
 
-typeWriter();
+
 
 
 
