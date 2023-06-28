@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html>
 <head>
   
@@ -54,7 +53,7 @@
       firebase.initializeApp(firebaseConfig);
     
       // Add event listener to the Twitter login button
-      const twitterButton = document.getElementById('login-button');
+      const twitterButton = document.getElementById('twitter-button');
       twitterButton.addEventListener('click', () => {
         // Create Twitter provider instance
         const provider = new firebase.auth.TwitterAuthProvider();
