@@ -4,10 +4,10 @@
   
   <title>Welcome</title>
   
-  <!-- for twitter login, necessary libs -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <!-- for twitter login, necessary libs OAUTH -->
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script src="https://cdn.rawgit.com/oauth-io/oauth-js/c5af4519/dist/oauth.js"></script>
-<script src="login-twitter.js"></script>
+<script src="login-twitter.js"></script> -->
 
 <!-- login logo font awesome -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
@@ -19,6 +19,10 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Geologica:wght@500&family=Lobster&family=Noto+Serif+Display:ital@1&family=Tilt+Prism&display=swap" rel="stylesheet">
   
+<!-- firebase auth -->
+<script src="https://www.gstatic.com/firebasejs/9.5.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.5.0/firebase-auth.js"></script>
+
 </head>
 
 
@@ -36,6 +40,40 @@
       </button>
     </nav>
 
+    <script>
+        const firebaseConfig = {
+      apiKey: "AIzaSyB7nLhz0FRw9K3RlCyE5xx1OUeATqknOIg",
+      authDomain: "twt-mate.firebaseapp.com",
+      projectId: "twt-mate",
+      storageBucket: "twt-mate.appspot.com",
+      messagingSenderId: "109279180270",
+      appId: "1:109279180270:web:0925e4faf7c7e097dc8aff",
+      measurementId: "G-SBTKQGX1KG"
+    };
+    
+      firebase.initializeApp(firebaseConfig);
+    
+      // Add event listener to the Twitter login button
+      const twitterButton = document.getElementById('twitter-button');
+      twitterButton.addEventListener('click', () => {
+        // Create Twitter provider instance
+        const provider = new firebase.auth.TwitterAuthProvider();
+    
+        // Sign in with Twitter using Firebase Auth
+        firebase.auth().signInWithPopup(provider)
+          .then((result) => {
+            // Handle successful login
+            const user = result.user;
+            console.log('Logged in:', user);
+            // You can redirect the user to another page or perform other actions here
+          })
+          .catch((error) => {
+            // Handle login error
+            console.error('Login error:', error);
+          });
+      });
+    </script>
+    
     <div class="content">
       <div id="container">
         <div id="center">
