@@ -54,7 +54,7 @@
       firebase.initializeApp(firebaseConfig);
     
       // Add event listener to the Twitter login button
-      const twitterButton = document.getElementById('twitter-button');
+      const twitterButton = document.getElementById('login-button');
       twitterButton.addEventListener('click', () => {
         // Create Twitter provider instance
         const provider = new firebase.auth.TwitterAuthProvider();
