@@ -1,0 +1,176 @@
+<style>
+
+    html{
+      background-size:cover;
+    }
+
+    
+      body {
+            overflow: hidden;
+            padding: 0;
+            background: linear-gradient(179.2deg, rgb(34, 34, 34) 0%, rgb(8, 0, 153) 29.7%, rgb(118, 6, 166) 63.4%, rgba(233, 0, 64, 0.58) 100.1%);
+            
+            
+            height: 100%;
+            margin: 0;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+        
+
+    nav {
+      background: radial-gradient(328px at 2.9% 15%, rgb(191, 224, 251) 0%, rgb(232, 233, 251) 25.8%, rgb(252, 239, 250) 50.8%, rgb(234, 251, 251) 77.6%, rgb(240, 251, 244) 100.7%) rgba(255, 255, 255, 0.1);
+      position: fixed;
+      top: 0px;
+      width: 100%;
+      z-index: 1;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 1);
+    }
+
+    .logo {
+  position: relative;
+  left: 25px;
+  margin: 10px;
+  font-weight: bold;
+  float: left;
+  font-family: nova cut;
+  font-size: 24px;
+  color: black;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.logo::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: 0;
+  width: 100%;
+  height: 10px;
+  background: linear-gradient(to bottom, rgba(5, 142, 226, 0.4), rgba(10, 209, 30, 0));
+  z-index: -1;
+  animation: logo-reflection 2s infinite;
+}
+
+@keyframes logo-reflection {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(20px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+
+    .login-button {
+    background-color: grey;
+    position: relative;
+    right: 2px;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    float: right;
+    margin: 10px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+
+    
+    .login-button i {
+    pointer-events: auto;
+     margin-right: 5px; /* Add spacing between icon and text */
+    }
+
+   
+    .login-button i {
+        animation: flipBird 2s linear infinite;
+        transform-style: preserve-3d;
+      }
+      
+      @keyframes flipBird {
+        0% {
+          transform: perspective(800px) rotateY(0deg);
+        }
+        50% {
+          transform: perspective(800px) rotateY(180deg);
+        }
+        100% {
+          transform: perspective(800px) rotateY(360deg);
+        }
+      }
+
+    .login-button::before {
+        content: "";
+        position: absolute;
+        left: 38px;
+        top: 50%;
+        width: 1px;
+        height: 70%;
+        background-color: black; /* Adjust the color as needed */
+        transform: translateY(-50%);
+    }
+
+    
+        .login-button:hover {
+        background-color: #303f9f;
+        border-color: black;
+        transform: scale(1.1);
+
+        }
+
+    /* Additional styles for the page */
+   
+
+    .content {
+      margin-top: 255px;
+      text-align:center;
+      color: #fff;
+    } 
+
+     h1 {
+      font-size: 36px;
+      font-family: 'Tilt Prism', cursive;   }
+
+
+/* typewriter for h1 */
+
+     #container {
+        display: flex;
+    }
+    
+    #center {
+        margin: auto;
+    }
+    @keyframes typing {
+        /* from { width: 0; }
+        to { width: 100%; } */
+
+        0%,
+        50%,
+        100% {
+          width: 0;
+        }
+        10%,
+        40% {
+          width: 13em;
+        }
+      }
+      @keyframes blink-caret {
+        from, to { border-color: transparent; }
+        50% { border-color: yellow; }
+    }
+    
+      #typewriter {
+        font-family: 'Courier New', Courier, monospace;
+        white-space: nowrap;
+        overflow: hidden;
+        border-right: .15em solid orange;
+        margin: 0 auto; /* Add this line to center the element horizontally */
+        text-align: center; /* Add this line to center the text within the element */
+        width: 50%; /* Adjust the width as desired */
+        animation: typing 8s steps(40, end) infinite, blink-caret 1s step-end infinite;
+    } 
+       
+  </style>
