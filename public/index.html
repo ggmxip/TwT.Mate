@@ -80,9 +80,12 @@ firebase.initializeApp(firebaseConfig);
 
   function signin()
   {
+
     var provider = new firebase.auth.TwitterAuthProvider();
 
-    firebase
+    firebase.auth().languageCode = 'it';
+    
+  firebase
   .auth()
   .signInWithPopup(provider)
   .then((result) => {
