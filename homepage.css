@@ -1,7 +1,24 @@
-body{
+/* CSS */
+body {
     background-color: #e5e5f7;
-    opacity: .7;
-    background-image: radial-gradient(circle at center center, #12b4e1, #e5e5f7), repeating-radial-gradient(circle at center center, #12b4e1, #12b4e1, 18px, transparent 36px, transparent 18px);
+    background-image: radial-gradient(circle at center center, #12b4e1, #e5e5f7),
+      repeating-radial-gradient(circle at center center, #12b4e1, #12b4e1, 18px, transparent 36px, transparent 18px);
     background-blend-mode: multiply;
-}
-
+    animation: pulsate 10s infinite;
+  }
+  
+  @keyframes pulsate {
+    0%, 100% {
+      background-color: #e5e5f7;
+    }
+    25% {
+      background-color: #f712b4;
+    }
+    50% {
+      background-color: #12b4e1;
+    }
+    75% {
+      background-color: #2ce562;
+    }
+  }
+  
